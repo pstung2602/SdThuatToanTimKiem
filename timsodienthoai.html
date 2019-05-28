@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let phonenumber = ["0989880888", "0978808881", "0968808881", "0928808881", "0918808881","0908808881"];
+
+    function checkNumber(number) {
+        regexp = /^09[678][0-9]{7}$/;
+        if (regexp.test(number)) {
+            return number + " là đầu số Viettel" + "<br>";
+        } else {
+            return number + " không phải là đầu số viettel" + "<br>";
+        }
+    }
+
+    for (i = 0; i < phonenumber.length; i++) {
+        document.write(checkNumber(phonenumber[i]));
+    }
+
+</script>
+
+</body>
+</html>
